@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//Libreria que contiene dlopen y dlsym
+//Necesita usar libreria( gcc -ldl)
 #include <dlfcn.h>
-#include <string.h>
 
 
 int main() {
@@ -16,8 +17,7 @@ int main() {
 	//Obtenemos donde esta la libreria
 	scanf("%s", strin);
 	
-	//Abrimos la libreria
-	//RTLD_LAZY: Modo de carga de la libreria
+	//Abrimos la libreria TODO: ¿que es RTLD_LAZY?
 	handle = dlopen (strin, RTLD_LAZY);
 	//Revisamos si la libreria se abrio correctamente
 	if (!handle) {
