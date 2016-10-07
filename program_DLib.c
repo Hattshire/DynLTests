@@ -16,7 +16,8 @@ int main() {
 	//Obtenemos donde esta la libreria
 	scanf("%s", strin);
 	
-	//Abrimos la libreria TODO: ¿que es RTLD_LAZY?
+	//Abrimos la libreria
+	//RTLD_LAZY: Modo de carga de la libreria
 	handle = dlopen (strin, RTLD_LAZY);
 	//Revisamos si la libreria se abrio correctamente
 	if (!handle) {
